@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Mousemove</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+        }
+        #position {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="myDiv">
+        Mova o mouse aqui!
+    </div>
+    <div id="position"></div>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        const position = document.getElementById('position');
+
+        myDiv.addEventListener('mousemove', function(event) {
+            const rect = myDiv.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            position.textContent = X={x}; Y:{y};
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário e Lista de Serviços</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Serviços</h1>
+    <form id="servicoForm">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required>
+        <br><br>
+        
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" maxlength="255" required>
+        <br><br>
+        
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+        <br><br>
+        
+        <label for="empresa_id">ID da Empresa:</label>
+        <input type="number" id="empresa_id" name="empresa_id" required>
+        <br><br>
+        
+        <label for="categoria_id">ID da Categoria:</label>
+        <input type="number" id="categoria_id" name="categoria_id" required>
+        <br><br>
+        
+        <button type="button" onclick="adicionarServico()">Adicionar Serviço</button>
+    </form>
+
+    <h2>Lista de Serviços</h2>
+    <table id="tabelaServicos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>ID da Empresa</th>
+                <th>ID da Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de serviço serão adicionadas aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        function adicionarServico() {
+            // Obter os valores do formulário
+            const id = document.getElementById('id').value;
+            const tipo = document.getElementById('tipo').value;
+            const valor = document.getElementById('valor').value;
+            const empresaId = document.getElementById('empresa_id').value;
+            const categoriaId = document.getElementById('categoria_id').value;
+
+            // Verificar se todos os campos estão preenchidos
+            if (!id || !tipo || !valor || !empresaId || !categoriaId) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Criar uma nova linha e adicionar os dados
+            const tabela = document.getElementById('tabelaServicos').getElementsByTagName('tbody')[0];
+            const novaLinha = tabela.insertRow();
+
+            novaLinha.insertCell().textContent = id;
+            novaLinha.insertCell().textContent = tipo;
+            novaLinha.insertCell().textContent = valor;
+            novaLinha.insertCell().textContent = empresaId;
+            novaLinha.insertCell().textContent = categoriaId;
+
+            // Limpar o formulário
+            document.getElementById('servicoForm').reset();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

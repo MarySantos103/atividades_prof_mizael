@@ -1,0 +1,15 @@
+//SetInterval(caliback,interval)
+
+//SentInterval(() => {
+    // console.log('Isso será mostrado a cada dois segundos')
+    //),2000)
+
+    //SentInterval(imprimirtexto,2000)
+
+    
+
+    function imprimirTexto(){
+        console.log('Isso será mostrado a cada dois segundos')
+    }
+
+    //Sentimeout(imprimirtexto,3000)

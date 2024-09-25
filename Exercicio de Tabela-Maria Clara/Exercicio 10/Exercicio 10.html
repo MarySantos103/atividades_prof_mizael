@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+        <title>exemplo de Tabela</title>
+        <style>
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th,td {
+                border: 1px solid #333;
+                padding:  10px;
+                text-align: center;
+            }
+            th {
+                background-color:  #4CAF50;
+                color: white;
+            }
+            .destaque {
+                background-color:  #ff6666;
+                font-weight:  bold; 
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+        <tr>
+            <td>Produtos</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Shampoo</td>
+            <td>11,00</td>
+            <td>5</td>
+            </tr>
+            <tr>
+                <td>Hidratante Corporal</td>
+                <td>20,00</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Creme de Pentear</td>
+                <td>15,00</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td class="destaque">15</td>
+            </tr>
+        </tbody>
+        </table>
+    </body>
+</html>
